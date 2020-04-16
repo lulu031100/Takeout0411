@@ -10,6 +10,6 @@ class Shop(models.Model):
     category = models.CharField('カテゴリ',max_length=20)
     text = models.TextField('説明')
     hours = models.TextField('営業時間')
-    closed = models.DateField('定休日')
+    closed = models.CharField('定休日',max_length=50)
     address = models.TextField('住所')
     phone = models.CharField('電話番号', max_length=14)

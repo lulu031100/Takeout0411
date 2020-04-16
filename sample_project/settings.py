@@ -31,7 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    #'diary.apps.TakeoutConfig',  # hasegawa
+    'takeout.apps.TakeoutConfig',  # hasegawa
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

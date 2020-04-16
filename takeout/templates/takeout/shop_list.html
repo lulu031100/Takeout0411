@@ -1,0 +1,30 @@
+<!-- このファイルは新規作成 hasegawa -->
+{% extends 'takeout/base.html' %}
+
+{% block content %}
+<h1>お店一覧</h1>
+<table class="table">
+    <thead>
+        <tr>
+            <th>カテゴリ</th>
+            <th>店名</th>
+            <th>住所</th>
+            <th>営業時間</th>
+            <th>定休日</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for shop in shop_list %}
+        <tr>
+            <td>{{ shop.category }}</td>
+            <td> <a href="{% url 'tekeout:detail' shop.pk %}">{{ shop.shopname }}</a></td>
+            <td>{{ shop.address }}</td>
+            <td>{{ shop.hours }}</td>
+            <td>{{ shop.closed }}</td>
+            <td><a href="{% url 'takeout:update' shop.pk %}">更新</a></td>
+            <td><a href="{% url 'takeout:delete' shop.pk %}">削除</a></td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
