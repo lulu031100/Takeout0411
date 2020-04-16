@@ -17,7 +17,7 @@
         {% for shop in shop_list %}
         <tr>
             <td>{{ shop.category }}</td>
-            <td> <a href="{% url 'tekeout:detail' shop.pk %}">{{ shop.shopname }}</a></td>
+            <td> <a href="{% url 'takeout:detail' shop.pk %}">{{ shop.shopname }}</a></td>
             <td>{{ shop.address }}</td>
             <td>{{ shop.hours }}</td>
             <td>{{ shop.closed }}</td>
